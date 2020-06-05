@@ -1,0 +1,25 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.summary {
+  margin-right: 5rem;
+
+  @include respond(xs) { // width < 900?
+    margin-right: 4.2rem; 
+  }
+  &__value {
+    font-size: 2rem;
+    margin-top: .8rem;
+    @include respond(xs) { // width < 900?
+      font-size: 2.4rem; 
+    }
+
+    &--score {
+      font-size: 3.2rem;
+
+      @include respond(xs) { // width < 900?
+        font-size: 5.2rem; 
+      }
+    }
+  }
+}

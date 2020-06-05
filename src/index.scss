@@ -1,0 +1,39 @@
+@import '../src/assets/styles/mixins';
+@import '../src/assets/styles/variables';
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-family: 'Roboto';
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+}
+
+h2 {
+  font-size: 3.2rem;
+
+  @include respond(xs) { // width < 900?
+    font-size: 4.2rem; //1 rem = 8px, 8/16 = 50%
+  }
+}
+
+p {
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.2rem;
+  color: $color-grey;
+  font-weight: 400;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: $color-grey-light-1;
+}

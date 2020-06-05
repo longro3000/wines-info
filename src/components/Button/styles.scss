@@ -1,0 +1,23 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.custom-button {
+  width: 100px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 4.5rem;
+  padding-bottom: 5rem;
+
+  @include respond(xs) { // width < 900?
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  &__button {
+    border: none;
+    color: $color-blue;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+  }
+}

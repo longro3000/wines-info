@@ -1,0 +1,111 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/animations';
+
+.detailCard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(89, 103, 125, 0.54);
+  animation: darken-background 0.5s ease;
+  z-index: 9999;
+
+  &__container {
+    position: relative;
+    margin: 10% auto;
+    width: 60%;
+    background: $color-white;
+    border-radius: 0.5rem;
+    text-align: left;
+    animation: dropDown 0.5s ease;
+
+    @include respond(xs) {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  &__comments {
+    line-height: 1.3rem;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 4.8rem 5.6rem 0 4.8rem;
+
+    @include respond(xs) {
+      padding: 2rem 1.6rem 4rem 1.6rem; 
+      font-size: 1.4rem;
+      border-bottom: 1px solid #C8CFD8;
+    }
+  }
+
+  &__comment {
+    margin-top: 2.4rem;
+
+    &:first-child {
+      margin-top: 1.7rem;
+    }
+  }
+
+  &__button-icon {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+  }
+
+  &--hidden {
+    display: none;
+    visibility: hidden;
+  }
+
+  &--show {
+    display: block;
+  }
+}
+
+.summary-cards {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 4.8rem 5.6rem 0 4.8rem;
+
+  h4 {
+    margin-top: 2.4rem;
+  }
+
+  @include respond(xs) {
+    flex-direction: column;
+    padding: 6rem 1.6rem 0 1.6rem;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      margin-right: 3rem;
+    }
+
+    @include respond(xs) {
+      flex-direction: row;
+    }
+  }
+
+  &__sub {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-evenly;
+
+    @include respond(xs) {
+      width: 100%;
+      justify-content: start;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@keyframes dropDown {
+  from {
+    transform: translateY(-50rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes darken-background {
+  from {
+    background-color: rgba(89, 103, 125, 0.1);
+  }
+  to {
+    background-color: rgba(89, 103, 125, 0.54);
+  }
+}
